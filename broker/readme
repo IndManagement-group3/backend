@@ -1,0 +1,1 @@
+MQTT broker should be installed natively on the platform running backend, refer to https://mosquitto.org/download/ for instructions for required platform

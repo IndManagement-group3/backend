@@ -1,7 +1,23 @@
+import os
+import logging
+
 from flask import Flask
 
-app = Flask(__name__)
+from .frontend.assets import assets
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+from .frontend.blueprints.pages import pages
+
+print(os.getcwd())
+
+app = Flask(
+	__name__,
+	static_folder="frontend/static",
+    template_folder="frontend/templates"
+)
+
+app.config.from_object(os.environ["BESHBARMAK_CONFIG"])
+log = logging.getLogger('werkzeug')
+log.setLevel(app.config["WEB_LOG_LEVEL"])
+
+assets.init_app(app)
+app.register_blueprint(pages)
