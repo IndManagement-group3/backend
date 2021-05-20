@@ -1,0 +1,3 @@
+[submodule "webserver/frontend"]
+	path = webserver/frontend
+	url = https://github.com/IndManagement-group3/frontend.git
