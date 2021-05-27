@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+export PYTHONPATH=$PWD
 export FLASK_APP=server
 export FLASK_ENV=development
 export BESHBARMAK_CONFIG=webserver.configs.dev

@@ -3,9 +3,9 @@ import logging
 
 from flask import Flask
 
-from .frontend.assets import assets
+from frontend.assets import assets
 
-from .frontend.blueprints.pages import pages
+from frontend.blueprints.pages import pages
 
 print(os.getcwd())
 
